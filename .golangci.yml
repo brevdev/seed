@@ -40,6 +40,10 @@ linters-settings:
     require-specific: false # don't require nolint directives to be specific about which linter is being skipped
   funlen:
     lines: 100
+  wrapcheck:
+    ignoreSigs:
+      - .WrapAndTrace
+      - .Errorf
 
 linters:
   # please, do not use `enable-all`: it's deprecated and will be removed soon.
@@ -87,7 +91,7 @@ linters:
     - whitespace
     # - errorlint
     # - goerr113
-    # - wrapcheck
+    - wrapcheck
 issues:
   # enable issues excluded by default 
   exclude-use-default: false
