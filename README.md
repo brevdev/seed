@@ -131,17 +131,17 @@ Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com
 
 1. Execute:
 
-    ```bash
-    godownloader --repo=your_org/repo_name > ./install.sh
-    ```
+   ```bash
+   godownloader --repo=your_org/repo_name > ./install.sh
+   ```
 
 1. Push `install.sh` to your repository.
 
 1. Add installation instructions to your `README.md` e.g.:
 
-    ```bash
-    curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/main/install.sh | sh -s -- -b /usr/local/bin
-    ```
+   ```bash
+   curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/main/install.sh | sh -s -- -b /usr/local/bin
+   ```
 
 ### How can I customize the release or add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest etc
 
@@ -149,6 +149,7 @@ Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well 
 
 ### How can I create a library instead of an application
 
+Change make file build command to `go build ./...`
 You can change the [.goreleaser.yml](.goreleaser.yml) to contain:
 
 ```yaml
