@@ -149,7 +149,8 @@ Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well 
 
 ### How can I create a library instead of an application
 
-Change make file build command to `go build ./...`
+Change make target `build` to `go build ./...`
+Remove docker as a release option by removing the dockerfile, goreleaser docker section, and docker login on the github action.
 You can change the [.goreleaser.yml](.goreleaser.yml) to contain:
 
 ```yaml
